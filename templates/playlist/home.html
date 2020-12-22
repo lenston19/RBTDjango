@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block userchoise__title %} Всё {% endblock %}
+
+{% block title %} Плейлисты для вас {% endblock %}
+
+{% block main %}
+      <section class="content">
+        <div class="container">
+          <div class="row py-3">
+            <div class="col-lg-3">
+              <a href="#" class="link-content">
+                <img src="{% static 'image/PlaylistDay.png' %}" alt class="img-playlist" />
+              </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="#" class="link-content">
+                <img src="{% static 'image/PlaylistWeak.png' %}" alt class="img-playlist" />
+              </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="#" class="link-content">
+                <img
+                  src="{%  static 'image/PlaylistEvening.png' %}"
+                  alt
+                  class="img-playlist"
+                />
+              </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="#" class="link-content">
+                <img src="{% static 'image/Playlist2020.png' %}" alt class="img-playlist" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+{% endblock %}

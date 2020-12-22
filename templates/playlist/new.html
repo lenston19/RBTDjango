@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block userchoise__title %} Новое {% endblock %}
+
+{% block title_block %} Новые треки и альбомы исполнителей {% endblock %}
+
+{% block main %}
+      <section class="content">
+        <div class="container">
+          <div class="row py-3">
+            <div class="col-lg-3">
+              <a href="{% url 'EgorCrid' %}" class="link-content">
+                <img src="{% static '/image/EgorKrid.png' %}" alt class="img-artist" />
+                <p class="name-artist">Егор Крид</p>
+              </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="#" class="link-content">
+                <img src="{% static '/image/Marsh.png' %}" alt class="img-artist" />
+                <p class="name-artist">Marshmello</p>
+              </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="#" class="link-content">
+                <img src="{%  static '/image/Ramil.png' %}" alt class="img-artist" />
+                <p class="name-artist">Ramil'</p>
+              </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="#" class="link-content">
+                <img src=" {% static '/image/Morgenshtern.png' %}" alt class="img-artist" />
+                <p class="name-artist">Morgenshtern</p>
+              </a>
+            </div>
+          </div>
+          <div class="row py-3">
+            <div class="col-lg-3">
+              <a href="#" class="link-content">
+                <img src="{% static '/image/Skriptonit.png' %}" alt class="img-artist" />
+                <p class="name-artist">Скриптонит</p>
+              </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="#" class="link-content">
+                <img src="{% static '/image/Mot.png' %}" alt class="img-artist" />
+                <p class="name-artist">Мот</p>
+              </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="#" class="link-content">
+                <img src="{% static '/image/Kasta.png' %}" alt class="img-artist" />
+                <p class="name-artist">Каста</p>
+              </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="#" class="link-content">
+                <img src="{% static '/image/Kamazz.png' %}" alt class="img-artist" />
+                <p class="name-artist">Kamazz</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block userchoise__title %} Настроение и жанры {% endblock %}
+
+{% block main %}
+    <section class="content">
+        <div class="container">
+          <div class="row py-3">
+            <div class="col-lg-3">
+              <a href="#" class="link-content">
+                <img src="{% static '/image/Relax.png' %}" alt class="img-nastroi" />
+                <p class="name-artist">Релакс</p>
+              </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="#" class="link-content">
+                <img src="{% static '/image/happy.png' %}" alt class="img-nastroi" />
+                <p class="name-artist">Радостная</p>
+              </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="#" class="link-content">
+                <img src="{% static '/image/Sad.png' %}" alt class="img-nastroi" />
+                <p class="name-artist">Грустная</p>
+              </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="#" class="link-content">
+                <img src="{% static '/image/best.png' %}" alt class="img-nastroi" />
+                <p class="name-artist">Популярная</p>
+              </a>
+            </div>
+          </div>
+          <div class="row py-3">
+            <div class="col-lg-3">
+              <a href="#" class="link-content">
+                <img src=" {% static '/image/evenings.png' %}" alt class="img-nastroi" />
+                <p class="name-artist">Вечерняя</p>
+              </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="#" class="link-content">
+                <img src="{% static '/image/InCar.png' %}" alt class="img-nastroi" />
+                <p class="name-artist">В машину</p>
+              </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="#" class="link-content">
+                <img src="{% static '/image/Rock.png' %}" alt class="img-nastroi" />
+                <p class="name-artist">Рок</p>
+              </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="#" class="link-content">
+                <img src="{% static '/image/Classic.png' %}" alt class="img-nastroi" />
+                <p class="name-artist">Классика</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+{% endblock %}

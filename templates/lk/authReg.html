@@ -1,0 +1,23 @@
+{% extends 'base_auth.html' %}
+
+{% load static %}
+
+{% block body %}
+<div class="container">
+      <div class="row justify-content-center py-5">
+        <div class="col-lg-6 auth">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'image/logoBlack.png' %}" alt class="auth-logo" />
+            </a>
+          <h3 class="auth-title">Регистрация</h3>
+            <form method="post">{% csrf_token %}
+                    {{ form.as_p }}
+                <button type="submit" class="auth-button">Зарегистрироваться</button>
+            </form>
+            <p class="auth-acc">
+            Есть аккаунт? <a href="{% url 'login' %}" class="auth-link">Войти</a>
+          </p>
+        </div>
+      </div>
+    </div>
+{% endblock %}

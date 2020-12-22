@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="{% static 'image/logo.png' %}" type="image/x-icon" />
+    <title>RBT.Music</title>
+  </head>
+  <body class="backbody">
+    <div class="container">
+      <div class="row justify-content-center py-5">
+        <div class="col-lg-3">
+          <a href="{% url 'home' %}">
+            <img src="{% static 'image/logo.png' %}" alt class="logo" />
+          </a>
+        </div>
+        <div class="col-lg-1 ml-auto">
+          <a href="{% url 'logout' %}">
+            <img src="{% static 'image/logout.png' %}" alt="Logout" />
+          </a>
+        </div>
+      </div>
+      <div class="row justify-content-center py-1">
+        <p class="lk-title">Личный кабинет</p>
+      </div>
+      <div class="row py-2">
+        <div class="col-lg-1">
+          <img src="{% static 'image/auth.png' %}" alt />
+        </div>
+        <div class="col-lg-10">
+          <p class="lk-person-name">{{ user.first_name }} {{ user.last_name }}</p>
+        </div>
+      </div>
+      <div class="row py-2">
+        <div class="col-lg-3">
+          <p class="lk-info">Логин</p>
+        </div>
+        <div class="col-lg-7 offset-md-2">
+          <p class="lk-info">{{ user.username }}</p>
+        </div>
+      </div>
+      <div class="row py-2">
+        <div class="col-lg-3">
+          <p class="lk-info">Email</p>
+        </div>
+        <div class="col-lg-7 offset-md-2">
+          <p class="lk-info">{{ user.email }}</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

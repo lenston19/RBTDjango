@@ -1,0 +1,103 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="{% static 'image/logo.png' %}" type="image/x-icon" />
+    <title>RBT.Music</title>
+  </head>
+  <body class="backbody">
+    <header class="header">
+        <div class="container">
+        <div class="row py-5">
+          <div class="col-lg-3">
+            <a href="{% url 'home' %}">
+              <img src="{% static 'image/logo.png' %}" alt class="logo" />
+            </a>
+          </div>
+          <div class="col-lg-4 offset-md-1">
+            <div class="search">
+                <form action="{% url 'search_results' %}" method="get">
+                    <input name="q" type="search" class="search-input" />
+                </form>
+            </div>
+          </div>
+          <div class="col-lg-1 offset-md-2">
+              {% if user.is_authenticated %}
+                  <a href="{% url 'lk' %}" class="authlk">
+              {% else %}
+                  <a href="{% url 'login' %}" class="authlk">
+              {% endif %}
+              <img src="{%  static 'image/auth.png' %}" alt />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+        <section class="navigation">
+        <div class="container">
+          <div class="row">
+            <h2 class="userchoice-title">{% block userchoise__title %} {% endblock %}</h2>
+          </div>
+          <div class="row">
+            <div class="col-lg-1 offset-md-1">
+              <a href="{% url 'home' %}" class="menu-all">
+                <p>Всё</p>
+              </a>
+            </div>
+            <div class="col-lg-2 offset-md-1">
+              <a href="{% url 'new' %}" class="menu-all">
+                <p>Новое</p>
+              </a>
+            </div>
+            <div class="col-lg-2">
+              <a href="{% url 'chart' %}" class="menu-all">
+                <p>Чарты</p>
+              </a>
+            </div>
+            <div class="col-lg-5">
+              <a href="{% url 'nastroi' %}" class="menu-all">
+                <p>Настроение и жанры</p>
+              </a>
+            </div>
+          </div>
+          <div class="row py-4">
+            <p class="menu-title__item">{% block title_block %} {% endblock %}</p>
+          </div>
+        </div>
+      </section>
+        {% block main %} {% endblock %}
+    </main>
+    <footer class="footer">
+        <div class="container">
+        <div class="row footer-social-list">
+          <div class="col-lg-1">
+            <a href="https://vk.com/noname_2262">
+              <img src="{% static 'image/vk.png' %}" alt class="social__item" />
+            </a>
+          </div>
+          <div class="col-lg-1">
+            <a href="https://www.instagram.com/stitch_1144">
+              <img src="{% static 'image/instagram.png' %}" alt class="social__item" />
+            </a>
+          </div>
+          <div class="col-lg-1">
+            <a href="https://vk.com/noname_2262">
+              <img src="{% static 'image/twitter.png' %}" alt class="social__item" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

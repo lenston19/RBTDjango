@@ -1,0 +1,210 @@
+p,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Baloo Bhai 2", sans-serif;
+}
+
+.backbody {
+  background: url(../image/background.png) repeat-y top center / auto;
+}
+
+.search {
+  width: 100%;
+  height: 62px;
+  background: #ffffff;
+  border-radius: 25px;
+}
+
+.search-input {
+  width: 100%;
+  height: 62px;
+  border-radius: 25px;
+
+  background: url(../image/Lupa.png) no-repeat center left;
+  background-position-x: 20px;
+  padding-left: 80px;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.search-input:focus {
+  outline-style: none;
+}
+
+.userchoice-title {
+  font-weight: bold;
+  font-size: 64px;
+  color: #ffffff;
+}
+
+.menu-all,
+.menu-title__item {
+  font-weight: 800;
+  font-size: 33px;
+  color: #ffffff;
+}
+
+.menu-all:hover,
+.link-content:hover {
+  color: #ffffff;
+  text-decoration-color: #ff0000;
+}
+
+.img-playlist,
+.social__item {
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  margin-top: 168px;
+  margin-bottom: 50px;
+}
+
+.img-artist,
+.img-nastroi {
+  width: 240px;
+  height: 240px;
+  border-radius: 540px;
+}
+
+.name-artist {
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 39px;
+  text-align: center;
+
+  margin-top: 10px;
+
+  color: #ffffff;
+}
+
+.track-img {
+  width: 80px;
+  height: 80px;
+}
+
+.track-name {
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 40px;
+  text-align: left;
+
+  color: #ffffff;
+}
+
+.track-author {
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 29px;
+  text-align: left;
+
+  color: #ffffff;
+}
+
+.track-time {
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 40px;
+
+  color: #ffffff;
+
+  opacity: 0.75;
+}
+
+.auth {
+  background: url(../image/AuthBack.png) repeat-y top center / cover;
+}
+
+.auth-logo {
+  width: 70%;
+  margin-top: 65px;
+  margin-left: 75px;
+  margin-bottom: 50px;
+}
+
+.auth-title {
+  font-weight: 800;
+  font-size: 45px;
+  line-height: 72px;
+  text-align: center;
+
+  color: #000000;
+}
+
+.auth-input,
+.auth-button {
+  width: 550px;
+  height: 70px;
+  margin-top: 50px;
+  background: #000000;
+  border-radius: 28px;
+
+  font-weight: 800;
+  font-size: 45px;
+  line-height: 72px;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.auth-button {
+  margin-bottom: 110px;
+}
+
+.auth-input::placeholder {
+  color: #ffffff;
+}
+
+.auth-input:focus,
+.auth-button:focus {
+  outline-style: none;
+}
+
+.auth-button:hover {
+  transition: 0.5s;
+  background: #ffffff;
+  color: #000000;
+}
+
+.auth-acc {
+  font-weight: 500;
+  font-size: 25px;
+  text-align: center;
+
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.auth-link {
+  color: #ff0000;
+}
+
+.lk-title {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 62px;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.lk-person-name {
+  font-weight: 400;
+  font-size: 48px;
+
+  color: #ffffff;
+}
+
+.lk-info {
+  font-weight: 800;
+  font-size: 38px;
+
+  color: #ffffff;
+}

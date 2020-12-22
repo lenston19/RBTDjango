@@ -1,0 +1,29 @@
+{% extends 'base_auth.html' %}
+
+{% load static %}
+
+{% block body %}
+<div class="container">
+      <div class="row justify-content-center py-5">
+        <div class="col-lg-6 auth">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'image/logoBlack.png' %}" alt class="auth-logo" />
+            </a>
+          <h3 class="auth-title">Авторизация</h3>
+            {% if not user.is_authenticated %}
+                <form action="{% if user.is_authenticated %} {% url 'lk' %} {% else %} {% url 'login' %} {% endif %}" method="post">
+                        {% csrf_token %}
+                        <input type="text" placeholder="Логин" class="auth-input" name="{{ form.username.html_name }}"/>
+                        {{ form.username.errors }}
+                        <input type="password" placeholder="Пароль" class="auth-input" name="{{ form.password.html_name }}"/>
+                        {{ form.password.errors }}
+                        <button type="submit" class="auth-button">Войти</button>
+                </form>
+                {% endif %}
+            <p class="auth-acc">
+            Нет аккаунта? <a href="{% url 'registration' %}" class="auth-link">Зарегистрироваться</a>
+          </p>
+        </div>
+      </div>
+    </div>
+{% endblock %}

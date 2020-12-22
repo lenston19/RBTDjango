@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block userchoise__title %} Егор Крид {% endblock %}
+
+{% block main %}
+    <section class="content">
+        <div class="container">
+            {% for track in tracks %}
+                <div class="row track py-1">
+                    <div class="col-lg-1">
+                      <img src="{{ track.TrackImg.url }}" alt class="track-img" />
+                    </div>
+                    <div class="col-lg-7">
+                      <h3 class="track-name">{{ track.TrackName }}</h3>
+                      <h5 class="track-author">{{ track.TrackAuthor }}</h5>
+                    </div>
+                    <div class="col-lg-1 d-flex align-items-center">
+                      <p class="track-time">{{ track.TrackTime }}</p>
+                    </div>
+                    <div class="col-lg-3 d-flex align-items-center">
+                      <img src="{% static 'image/zaglushka.png' %}" alt />
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+      </section>
+{% endblock %}
+
